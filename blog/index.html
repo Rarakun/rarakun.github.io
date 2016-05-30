@@ -2,6 +2,13 @@
 layout: default
 title: Rarakun Blog
 ---
+
+		<div class="section">
+			<div class="container">
+				<div class="row">
+
+					<div class="three-quarters-block">
+						<div class="content">
 	  {% for post in site.posts %}
 
 							<article class="post summary hentry" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
@@ -53,4 +60,63 @@ title: Rarakun Blog
 								</div> <!-- .entry-summary -->
 
 							</article> <!-- .post.summary -->
+	  
+							<div class="pagination">
+
+								<a class="prev button" href="blog.html"><i class="fa fa-chevron-left"></i> Previous Page</a>
+								<a class="next button" href="blog.html">Next Page <i class="fa fa-chevron-right"></i></a>
+
+							</div> <!-- .pagination -->
+
+						</div> <!-- .content -->
+					</div> <!-- .three-quarters-block -->
+					<div class="one-quarter-block" role="complementary">
+						<div class="sidebar">
+
+							<div class="search-widget widget">
+								<form class="widget-form" action="#" method="get" role="search">
+									<label>
+										<span class="screen-reader-text">Search this website:</span>
+										<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="search" title="Search" />
+									</label>
+									<button><i class="fa fa-search"></i></button>
+								</form>
+							</div> <!-- .search.widget -->
+
+							<div class="widget">
+								<h3 class="widget-title">Categories</h3>
+								<ul>
+									<li><a href="/blog">Category One</a></li>
+									<li><a href="/blog">Category Two</a></li>
+									<li><a href="/blog">Category Three</a></li>
+									<li><a href="/blog">Category Four</a></li>
+									<li><a href="/blog">Category Five</a></li>
+									<li><a href="/blog">Category Six</a></li>
+									<li><a href="/blog">Category Seven</a></li>
+									<li><a href="/blog">Category Eight</a></li>
+								</ul>
+							</div> <!-- .widget -->
+
+							<div class="widget">
+								<h3 class="widget-title">Archives</h3>
+								<ul>
+									<li><a href="/blog">July 2015</a></li>
+									<li><a href="/blog">June 2015</a></li>
+									<li><a href="/blog">May 2015</a></li>
+									<li><a href="/blog">April 2015</a></li>
+									<li><a href="/blog">March 2015</a></li>
+									<li><a href="/blog">February 2015</a></li>
+									<li><a href="/blog">January 2015</a></li>
+									<li><a href="/blog">December 2014</a></li>
+									<li><a href="/blog">November 2014</a></li>
+									<li><a href="/blog">October 2014</a></li>
+								</ul>
+							</div> <!-- .widget -->
+
+						</div> <!-- .sidebar -->
+					</div> <!-- .one-quarter-block -->
 	  {% endfor %}
+	  
+				</div> <!-- .row -->
+			</div> <!-- .container -->
+		</div> <!-- .section -->
