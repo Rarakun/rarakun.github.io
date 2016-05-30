@@ -61,12 +61,31 @@ title: Rarakun Blog
 
 							</article> <!-- .post.summary -->
 	  
+							{% if paginator.total_pages > 1 %}
 							<div class="pagination">
+							  {% if paginator.previous_page %}
+								<a class="prev button" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-chevron-left"></i> Previous Page</a>
+							  {% else %}
+								<span>&laquo; Previous</span>
+							  {% endif %}
 
-								<a class="prev button" href="blog.html"><i class="fa fa-chevron-left"></i> Previous Page</a>
-								<a class="next button" href="blog.html">Next Page <i class="fa fa-chevron-right"></i></a>
+							  {% for page in (1..paginator.total_pages) %}
+								{% if page == paginator.page %}
+								  <em>{{ page }}</em>
+								{% elsif page == 1 %}
+								  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+								{% else %}
+								  <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+								{% endif %}
+							  {% endfor %}
 
-							</div> <!-- .pagination -->
+							  {% if paginator.next_page %}
+								<a class="next button" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next Page <i class="fa fa-chevron-right"></i></a>
+							  {% else %}
+								<span>Next &raquo;</span>
+							  {% endif %}
+							</div>
+							{% endif %}
 
 						</div> <!-- .content -->
 					</div> <!-- .three-quarters-block -->
