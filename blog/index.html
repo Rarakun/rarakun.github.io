@@ -16,9 +16,9 @@ title: Rarakun Blog
 											<i class="fa fa-clock-o fa-fw"></i> <span class="updated">{{ post.date | date_to_string }}</span>
 										</span> <!-- .post-date -->
 
-										<!-- <span class="post-author">
-											<i class="fa fa-user fa-fw"></i> Written by <span class="vcard"><a class="fn url" href="author.html">Author</a></span>
-										</span>  -->
+										<span class="post-author">
+											<i class="fa fa-user fa-fw"></i> Written by <span class="vcard"><a class="fn url" href="/about/{{ post.author }}">{{ post.author }}</a></span>
+										</span> 
 										<!-- .post-author -->
 
 										<!-- <span class="post-categories">
@@ -26,9 +26,12 @@ title: Rarakun Blog
 										</span>  -->
 										<!-- .post-categories -->
 
-										<!-- <span class="post-tags">
-											<i class="fa fa-tags fa-fw"></i> <a href="blog.html" rel="tag">Tag A</a>, <a href="blog.html" rel="tag">Tag B</a>, <a href="blog.html" rel="tag">Tag C</a>
-										</span>  -->
+										<span class="post-tags">
+											<i class="fa fa-tags fa-fw"></i	> 
+											{% for tag in page.tags %}
+											<a href="{{ tag }}" rel="tag">{{ tag }}</a> 
+											{% endfor $}
+										</span> 
 										<!-- .post-tags -->
 
 									</div> <!-- .entry-meta -->
