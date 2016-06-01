@@ -1,3 +1,7 @@
+---
+author: Ironicnet
+categories: blog
+---
 # First Post #
 
 Starting to write a blog it's always hard. I tried many times but i really didn't have much to say. I hope this time is different.
